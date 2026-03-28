@@ -2,22 +2,19 @@
 
 namespace OOPBusinessGeneric
 {
-    public class CPF
+    public class CPF : AText
     {
-        private readonly Text Number;
-
-        public CPF(Text number)
+        public CPF(string cpf, string validPattern) : base(cpf, validPattern)
         {
-            if (!CPFIsValid(cpf:number.GetText()))
+            if (!CPFIsValid(cpf:Text))
             {
-                throw new ArgumentException($"Invalid Argument 'number'='{number.GetText()}'!");
+                throw new ArgumentException($"Invalid Argument 'cpf'='{cpf}'!");
             }
-            Number = number;
         }
 
         public string GetCPF()
         {
-            return Number.GetText();
+            return Text;
         }
 
         public string ObtainFormattedCPF()
@@ -78,12 +75,18 @@ namespace OOPBusinessGeneric
 
         public string Format()
         {
-            return string.Format("{0:000\\.000\\.000-00}", long.Parse(GetCPF()));
+            string raizA = Text.Substring(0, 3);
+            string raizB = Text.Substring(3, 3);
+            string raizC = Text.Substring(6, 3);
+            string dv = Text.Substring(9, 2);
+            //return $"{raizA}.{raizB}.{raizC}-{dv}";
+            return ToString("###.###.###-##", null);
+
         }
 
         public string ObtainHashedCPF()
         {
-            return Number.ObtainHashedText();
+            return ObtainHashedText();
         }
     }
 }

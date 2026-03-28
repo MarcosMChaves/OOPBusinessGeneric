@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OOPFoundation" Version="1.0.3" />
+    <PackageReference Include="OOPFoundation" Version="1.1.5" />
   </ItemGroup>
 
 </Project>

@@ -2,22 +2,19 @@
 
 namespace OOPBusinessGeneric
 {
-    public class CNPJ
+    public class CNPJ : AText
     {
-        private readonly Text Number;
-
-        public CNPJ(Text number)
+        public CNPJ(string cnpj, string validPattern) : base(cnpj, validPattern)
         {
-            if (!CNPJIsValid(cnpj:number.GetText()))
+            if (!CNPJIsValid(cnpj:Text))
             {
-                throw new ArgumentException($"Invalid Argument 'number'='{number.GetText()}'!");
+                throw new ArgumentException($"Invalid Argument 'cnpj'='{cnpj}'!");
             }
-            Number = number;
         }
 
         public string GetCNPJ()
         {
-            return Number.GetText();
+            return Text;
         }
 
         public string ObtainFormattedCNPJ()
@@ -83,17 +80,18 @@ namespace OOPBusinessGeneric
 
         public string Format()
         {
-            string raizA = Number.GetText().Substring(0, 2);
-            string raizB = Number.GetText().Substring(2, 3);
-            string raizC = Number.GetText().Substring(5, 3);
-            string ordem = Number.GetText().Substring(8, 4);
-            string dv = Number.GetText().Substring(12, 2);
-            return $"{raizA}.{raizB}.{raizC}/{ordem}-{dv}";
+            string raizA = Text.Substring(0, 2);
+            string raizB = Text.Substring(2, 3);
+            string raizC = Text.Substring(5, 3);
+            string ordem = Text.Substring(8, 4);
+            string dv = Text.Substring(12, 2);
+            //return $"{raizA}.{raizB}.{raizC}/{ordem}-{dv}";
+            return ToString("##.###.###/####-##", null);
         }
 
         public string ObtainHashedCNPJ()
         {
-            return Number.ObtainHashedText();
+            return ObtainHashedText();
         }
 
     }
