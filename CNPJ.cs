@@ -80,13 +80,7 @@ namespace OOPBusinessGeneric
 
         public string Format()
         {
-            string raizA = Text.Substring(0, 2);
-            string raizB = Text.Substring(2, 3);
-            string raizC = Text.Substring(5, 3);
-            string ordem = Text.Substring(8, 4);
-            string dv = Text.Substring(12, 2);
-            //return $"{raizA}.{raizB}.{raizC}/{ordem}-{dv}";
-            return ToString("##.###.###/####-##", null);
+            return ToString("##.###.###/####-##");
         }
 
         public string ObtainHashedCNPJ()

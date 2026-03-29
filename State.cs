@@ -10,6 +10,12 @@ namespace OOPBusinessGeneric
         public State(string name, string validPattern, Acronym isoStateCode, Country country) : 
             base(name, validPattern)
         {
+            if (name.Length < 1 ||
+                name.Length > 60) // Baseado em pesquisa: maior nome tem 56 chars e o menor 1
+            {
+                throw new ArgumentException($"Invalid argument 'name'='{name}'! Length MUST be in the range [1, 60].");
+            }
+
             ISOStateCode = isoStateCode ?? throw new ArgumentNullException(nameof(isoStateCode));
             Country = country ?? throw new ArgumentNullException(nameof(country));
         }

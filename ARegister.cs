@@ -22,7 +22,7 @@ namespace OOPBusinessGeneric
                 throw new ArgumentException($"Invalid Argument 'number'='{number}' length={NumberLength}");
             }
         }
-        private string GetNumber()
+        public string GetNumber()
         {
             return Text;
         }

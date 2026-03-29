@@ -75,12 +75,7 @@ namespace OOPBusinessGeneric
 
         public string Format()
         {
-            string raizA = Text.Substring(0, 3);
-            string raizB = Text.Substring(3, 3);
-            string raizC = Text.Substring(6, 3);
-            string dv = Text.Substring(9, 2);
-            //return $"{raizA}.{raizB}.{raizC}-{dv}";
-            return ToString("###.###.###-##", null);
+            return ToString("###.###.###-##");
 
         }
 

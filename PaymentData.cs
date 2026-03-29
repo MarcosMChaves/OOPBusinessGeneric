@@ -19,7 +19,7 @@ namespace OOPBusinessGeneric
 
         public string ObtainPaymentData()
         {
-            return $"{Value.GetCurrency()} Status: {Status}";
+            return $"{Value.ObtainFormattedCurrency()} Status: {Status}";
         }
     }
 }
