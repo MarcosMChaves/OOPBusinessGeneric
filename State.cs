@@ -29,9 +29,9 @@ namespace OOPBusinessGeneric
         {
             return ISOStateCode.GetAcronym();
         }
-        public string ObtainCountryStateAcronym()
+        public string ObtainStateAcronymCountry()
         {
-            return $"{Country.GetCountry().ToUpper()} {GetAcronym()}";
+            return $"{GetAcronym()} {Country.GetCountry().ToUpper()}";
         }
         public string ObtainCountryOnly()
         {

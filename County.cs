@@ -22,9 +22,9 @@ namespace OOPBusinessGeneric
         {
             return Text;
         }
-        public string ObtainStateAcronymCounty()
+        public string ObtainCountyStateAcronym()
         {
-            return $"{State.ObtainCountryStateAcronym()}-{Text}";
+            return $"{Text}, {State.ObtainStateAcronymCountry()}";
         }
         public string ObtainCountryOnly()
         {

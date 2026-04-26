@@ -7,13 +7,16 @@ namespace OOPBusinessGeneric
         private readonly Text FirstName;
         private readonly Text LastName;
         private readonly Text MiddleNames;
-        // TODO Create Address; but first MUST create Address and other necessary classes
+        private readonly Year BirthYear;
+        private Address? Address;
 
-        public APerson(Text firstName, Text lastName, Text middleNames)
+        public APerson(Text firstName, Text lastName, Text middleNames, Year birthYear, Address address=null)
         {
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
             LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
             MiddleNames = middleNames ?? throw new ArgumentNullException(nameof(middleNames));
+            BirthYear = birthYear ?? throw new ArgumentNullException(nameof(birthYear));
+            Address = address;
         }
 
         public string ObtainFullName()
@@ -24,9 +27,20 @@ namespace OOPBusinessGeneric
         {
             return $"{FirstName.GetText()} {LastName.GetText()}";
         }
-        // TODO Create SetAddress
+        public void SetAddress(Address address)
+        {
+            Address = address;
+        }
+        public string ObtainFormattedAddress()
+        {
+            if(Address == null)
+            {
+                return "N/A";
+            }
 
-        // TODO Create ObtainFormattedAddress
+            return Address.ObtainAddress();
+        }
 
+        public int AgeInYearsOnly => DateTime.Now.Year - BirthYear.GetYear();
     }
 }
