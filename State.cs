@@ -1,4 +1,5 @@
 ﻿using OOPFoundation;
+using System.Security.Cryptography.X509Certificates;
 
 namespace OOPBusinessGeneric
 {
@@ -28,6 +29,13 @@ namespace OOPBusinessGeneric
         {
             return ISOStateCode.GetAcronym();
         }
-
+        public string ObtainCountryStateAcronym()
+        {
+            return $"{Country.GetCountry().ToUpper()} {GetAcronym()}";
+        }
+        public string ObtainCountryOnly()
+        {
+            return $"{Country.GetCountry().ToUpper()}";
+        }
     }
 }

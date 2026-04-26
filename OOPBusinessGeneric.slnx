@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../OOPBusinessGeneric.Tests/OOPBusinessGeneric.Tests.csproj" Id="abc19601-a8b7-4f20-b2f5-14272d085dfd" />
   <Project Path="OOPBusinessGeneric.csproj" />
 </Solution>

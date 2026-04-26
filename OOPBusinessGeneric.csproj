@@ -4,10 +4,33 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MarcosMChaves/OOPBusinessGeneric</RepositoryUrl>
+    <PackageTags>OOP; Teaching</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>OOPBusinessGeneric</Title>
+    <Authors>Prof. Marcos M. Chaves</Authors>
+    <Company>Marcos M. Chaves</Company>
+    <Copyright>MIT License</Copyright>
+    <Version>1.0.2</Version>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OOPFoundation" Version="1.1.10" />
+    <PackageReference Include="OOPFoundation" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

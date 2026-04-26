@@ -17,21 +17,21 @@
 
 `Complement` *extends* `OOPFoundation.AText` : address complement information, e.g. Apt ou Block info
 
-`Country` *extends* `OOPFoundation.AText`, *uses* `OOPFoundation.Acronym` : 
+`Country` *extends* `OOPFoundation.AText`, *uses* `OOPFoundation.Acronym` : identifies the country of residence for example
 
-`County` *extends* `OOPFoundation.AText`, *uses* `State` : identifies the city of residence for instance
+`County` *extends* `OOPFoundation.AText`, *uses* `State` : identifies the city of residence for example
 
 `CNPJ` *extends* `OOPFoundation.AText` : Brazilian business identification number for taxes purposes
 
 `CPF` *extends* `OOPFoundation.AText` : Brazilian individual (person) identification number for taxes purposes
 
-`Neighborhood` *extends* `OOPFoundation.AText` : identifies the neighborhood
+`Neighborhood` *extends* `OOPFoundation.AText` : identifies the neighborhood of residence for example
 
 `PublicWay` *extends* `OOPFoundation.AText` : identifies Street, Avenue...
 
-`State` *extends* `OOPFoundation.AText`, *uses* `OOPFoundation.Acronym`, `Country` : identifies the state of residence
+`State` *extends* `OOPFoundation.AText`, *uses* `OOPFoundation.Acronym`, `Country` : identifies the state of residence for example
 
-`ZIPCode` *extends* `OOPFoundation.AText` : identifies the ZIP Code
+`ZIPCode` *extends* `OOPFoundation.AText` : identifies the ZIP Code of residence for example
 
 ## UML
 
