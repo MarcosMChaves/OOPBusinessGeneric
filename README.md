@@ -2,7 +2,7 @@
 
 ###### CST | TADS | POO
 
-Defines **Business Generics** abstractions, classes and interfaces for teaching **Object-Oriented Programming in C#**. 
+Defines **Business Generics** abstractions, classes and interfaces for teaching **Object-Oriented Paradigm in C#**. 
 
 ## Structures
 
@@ -17,7 +17,7 @@ Defines **Business Generics** abstractions, classes and interfaces for teaching 
 `ARegister` *extends* `OOPFoundation.AText` : allows creation of different identification numbers, e.g. Employee Number or Student Number
 
 ### Interfaces
-**NONE**
+`NONE`
 
 ### Classes
 
@@ -54,7 +54,6 @@ Defines **Business Generics** abstractions, classes and interfaces for teaching 
 
 This is a **NuGet** package aimed at teaching Object-Oriented Paradigm **concepts** to a specific group of students. 
 
-
-Best regards,
+---
 
 Prof. Marcos M. Chaves
