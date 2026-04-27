@@ -12,7 +12,7 @@ Defines **Business Generics** abstractions, classes and interfaces for teaching 
 
 ### Abstract Classes
 
-`APerson` *uses* `OOPFoundation.AText` : allows creation of different classes to represent different types of people, e.g. Employee or Student 
+`APerson` *has* `OOPFoundation.AText` : allows creation of different classes to represent different types of people, e.g. Employee or Student 
 
 `ARegister` *extends* `OOPFoundation.AText` : allows creation of different identification numbers, e.g. Employee Number or Student Number
 
