@@ -10,6 +10,8 @@ Defines **Business Generics** abstractions, classes and interfaces for teaching 
 
 [OOPFoundation](https://www.nuget.org/packages/OOPFoundation/ "OOPFoundation") : defines **foundation** abstractions, classes and interfaces.
 
+[OOPBusinessGeneric](https://www.nuget.org/packages/OOPBusinessGeneric/ "OOPBusinessGeneric") : defines **business generics** abstractions, classes and interfaces.
+
 ### Abstract Classes
 
 `APerson` *has* `OOPFoundation.AText` : allows creation of different classes to represent different types of people, e.g. Employee or Student 
