@@ -19,6 +19,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="OOP-BusinessGeneric.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OOPFoundation" Version="1.2.0" />
   </ItemGroup>
 

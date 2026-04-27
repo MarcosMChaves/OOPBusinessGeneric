@@ -1,10 +1,18 @@
 # OOPBusinessGeneric
 
+###### CST | TADS | POO
+
+Defines **Business Generics** abstractions, classes and interfaces for teaching **Object-Oriented Programming in C#**. 
+
 ## Structures
+
+### Packages
+
+[OOPFoundation](https://www.nuget.org/packages/OOPFoundation/ "OOPFoundation") : defines **foundation** abstractions, classes and interfaces.
 
 ### Abstract Classes
 
-`APerson` : allows creation of different classes to represent different persons, e.g. Employee or Student 
+`APerson` *extends* `OOPFoundation.AText` : allows creation of different classes to represent different types of people, e.g. Employee or Student 
 
 `ARegister` *extends* `OOPFoundation.AText` : allows creation of different identification numbers, e.g. Employee Number or Student Number
 
@@ -37,7 +45,9 @@
 
 ## UML
 
-![OOPBusinessGeneric UML](UML-OOPBusinessGeneric.png "OOPBusinessGeneric UML")
+**Diagrama de Classes**
+
+![UML](OOP-BusinessGeneric.png)
 
 ---
 ## NOTICE! 
@@ -48,5 +58,3 @@ This is a **NuGet** package aimed at teaching Object-Oriented Paradigm **concept
 Best regards,
 
 Prof. Marcos M. Chaves
-
-CST | TADS
