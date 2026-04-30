@@ -4,11 +4,15 @@ namespace OOPBusinessGeneric
 {
     public class CNPJ : AText
     {
+        private const int CNPJ_LENGTH = 14;
+        private const int ROOT_LENGTH = 8;
+        private const int ORDER_LENGTH = 4;
+
         public CNPJ(string cnpj, string validPattern) : base(cnpj, validPattern)
         {
             if (!CNPJIsValid(cnpj:Text))
             {
-                throw new ArgumentException($"Invalid Argument 'cnpj'='{cnpj}'!");
+                throw new ArgumentException($"Invalid Argument 'cnpj'='{cnpj}' Check content, length and/or DV!");
             }
         }
 
@@ -24,19 +28,29 @@ namespace OOPBusinessGeneric
 
         private bool CNPJIsValid(string cnpj)
         {
-            int REPETITION = 8;
-            if (cnpj.Length != 14 ||
-                cnpj.Substring(0, REPETITION) == new string('1', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('2', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('3', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('4', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('5', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('6', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('7', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('8', REPETITION) ||
-                cnpj.Substring(0, REPETITION) == new string('9', REPETITION) ||
-                cnpj.Substring(8, 4) == "0000" ||
-                cnpj.Substring(12) != CalculateCheckDigit(cnpj:cnpj))
+            if (CNPJ_LENGTH != cnpj.Length)
+            {
+                return false;
+            }
+
+            if (cnpj.Substring(0, ROOT_LENGTH) == new string('1', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('2', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('3', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('4', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('5', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('6', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('7', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('8', ROOT_LENGTH) ||
+                cnpj.Substring(0, ROOT_LENGTH) == new string('9', ROOT_LENGTH))
+            {
+                return false;
+            }
+            if(cnpj.Substring(8, ORDER_LENGTH) == "0000"){
+                return false;
+            }
+
+            if (!cnpj.Substring(12).All(char.IsDigit) ||
+                cnpj.Substring(12) != CalculateCheckDigit(cnpj: cnpj))
             {
                 return false;
             }

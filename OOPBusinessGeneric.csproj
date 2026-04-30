@@ -13,7 +13,7 @@
     <Authors>Prof. Marcos M. Chaves</Authors>
     <Company>Marcos M. Chaves</Company>
     <Copyright>MIT License</Copyright>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
